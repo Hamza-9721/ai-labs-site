@@ -1,11 +1,12 @@
 modules = ["nodejs-20", "web"]
-run = "npm run dev"
+run = "cd my-yt-site && npm run start"
 
 [nix]
 channel = "stable-24_05"
 
 [deployment]
-run = ["sh", "-c", "cd my-yt-site npm run dev"]
+build = ["sh", "-c", "cd my-yt-site && npm install && npm run build"]
+run = ["sh", "-c", "cd my-yt-site && npm run start"]
 deploymentTarget = "cloudrun"
 
 [workflows]
