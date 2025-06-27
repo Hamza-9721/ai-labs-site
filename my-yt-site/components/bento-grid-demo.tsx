@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const getFontSizeForComment = (comment: string) => {
   const length = comment.length;
@@ -15,12 +16,12 @@ const getFontSizeForComment = (comment: string) => {
 export default function BentoGridDemo() {
   const [hovered, setHovered] = useState<number | null>(null);
   return (
-    <section className="bg-background text-foreground py-20">
+    <section className="bg-background text-foreground py-20 relative">
       <div className="container mx-auto px-2 sm:px-6 lg:px-8">
-        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-12 z-10 relative">
           Hear From Our Community
         </h2>
-        <BentoGrid className="max-w-4xl mx-auto">
+        <BentoGrid className="max-w-4xl mx-auto z-10 relative">
           {items.map((item, i) => (
             <BentoGridItem
               key={i}
@@ -35,6 +36,7 @@ export default function BentoGridDemo() {
           ))}
         </BentoGrid>
       </div>
+      <BackgroundBeams className="z-0" />
     </section>
   );
 }

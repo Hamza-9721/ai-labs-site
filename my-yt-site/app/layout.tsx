@@ -14,6 +14,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className="dark">
+      <head>
+        <style>{`
+          body {
+            overflow-x: clip;
+          }
+        `}</style>
+      </head>
       <body className="antialiased">
         <SmoothScrollProvider>
           {children}

@@ -250,6 +250,7 @@ interface PricingTier {
   price: number;
   features: string[];
   isPopular?: boolean;
+  isComingSoon?: boolean;
 }
 
 interface PricingCardProps extends PricingTier {
@@ -347,10 +348,10 @@ const MembershipSection = () => {
     threshold: 0.1,
   });
 
-  const pricingTiers = [
+  const tiers: PricingTier[] = [
     {
       tier: "Basic",
-      price: 5,
+      price: 3.99,
       features: ["Priority Replys", "Get your Questions Answered"],
       isPopular: true,
     },
@@ -440,7 +441,7 @@ const MembershipSection = () => {
               </p>
             </motion.div>
             <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8">
-              {pricingTiers.map((tier, index) => {
+              {tiers.map((tier, index) => {
                 const isComingSoon = (tier as { isComingSoon?: boolean })
                   .isComingSoon;
                 return (
