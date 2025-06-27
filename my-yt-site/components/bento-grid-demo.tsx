@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { BentoGrid, BentoGridItem } from "@/components/ui/bento-grid";
-import { BackgroundBeams } from "@/components/ui/background-beams";
 
 const getFontSizeForComment = (comment: string) => {
   const length = comment.length;
@@ -36,7 +35,6 @@ export default function BentoGridDemo() {
           ))}
         </BentoGrid>
       </div>
-      <BackgroundBeams className="z-0" />
     </section>
   );
 }

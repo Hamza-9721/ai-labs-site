@@ -65,8 +65,8 @@ const Navbar = () => {
               <Image
                 src="/logo.png"
                 alt="Logo"
-                width={60}
-                height={60}
+                width={40}
+                height={40}
                 className="rounded-full"
               />
               <span className="ml-3 font-bold text-xl">AI Labs</span>
