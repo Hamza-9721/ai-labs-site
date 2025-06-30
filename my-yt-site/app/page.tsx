@@ -116,7 +116,7 @@ const Hero = () => {
   };
 
   return (
-    <section className="min-h-screen flex flex-col justify-center items-center text-center text-foreground bg-background relative overflow-hidden">
+    <section className="min-h-screen flex flex-col justify-center items-center text-center text-foreground bg-background relative overflow-hidden max-w-full">
       <div className="absolute inset-0 w-full h-full">
         <div className="relative h-full w-full overflow-hidden">
           <div className="absolute inset-0 z-10 bg-gradient-to-b from-background via-background/80 to-background" />
@@ -128,13 +128,13 @@ const Hero = () => {
         variants={containerVariants}
         initial="hidden"
         animate="visible"
-        className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.h1 variants={itemVariants} className="text-5xl md:text-7xl font-bold leading-tight mb-4 text-center">
+        className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 max-w-full w-full">
+          <motion.h1 variants={itemVariants} className="text-4xl sm:text-5xl md:text-7xl font-bold leading-tight mb-4 text-center">
             Master AI powered{" "}
             <ContainerTextFlip
               words={["Coding,", "UI/UX,", "Testing,", "Agents,"]}
               className="text-yellow-400 block md:inline-block"
-              textClassName="text-5xl md:text-7xl font-bold text-center"
+              textClassName="text-4xl sm:text-5xl md:text-7xl font-bold text-center"
             />{" "}
             <span className="md:block">Taught by the Best</span>
           </motion.h1>
@@ -479,7 +479,7 @@ const BestVideosSection = () => {
 
 const CtaSection = () => {
   return (
-    <AnimatedSection className="relative overflow-hidden">
+    <AnimatedSection className="relative overflow-hidden max-w-full">
       <motion.div
         className="absolute inset-0 z-0"
         style={{
@@ -499,12 +499,14 @@ const CtaSection = () => {
         }}
       />
       <div className="absolute inset-0 bg-black/70 z-10" />
-      <div className="relative z-20 flex flex-col items-center justify-center h-full space-y-12 pt-24 md:space-y-48 md:pt-0">
+      <div className="relative z-20 flex flex-col items-center justify-center h-full space-y-12 pt-24 md:space-y-48 md:pt-0 w-full max-w-full">
         <h2 className="text-4xl md:text-5xl font-bold text-white text-center">
           Learn With AI Labs On Different Platforms
         </h2>
-        <div className="transform scale-100 md:scale-180">
-          <FloatingDockDemo />
+        <div className="w-full flex justify-center">
+          <div className="transform scale-100 md:scale-125">
+            <FloatingDockDemo />
+          </div>
         </div>
       </div>
     </AnimatedSection>
@@ -589,7 +591,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <main className="min-h-screen text-foreground relative">
+      <main className="min-h-screen text-foreground relative max-w-full w-full md:overflow-x-visible overflow-x-hidden">
         <Spotlight />
         <Hero />
         <AboutSection />
