@@ -218,24 +218,24 @@ const AboutSection = () => {
                 you can spend less time debugging and more time creating.
               </p>
             </div>
-            <div className="mt-12 pt-8 border-t border-white/10 grid grid-cols-3 gap-8 text-center">
+            <div className="mt-12 pt-8 border-t border-white/10 grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8 text-center">
               <div>
-                <p className="text-4xl md:text-5xl font-bold text-foreground mb-2">
+                <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-2">
                   <AnimatedCounter to={30000} />
                 </p>
-                <p className="text-muted-foreground">Subscribers</p>
+                <p className="text-sm sm:text-base text-muted-foreground">Subscribers</p>
               </div>
               <div>
-                <p className="text-4xl md:text-5xl font-bold text-foreground mb-2">
+                <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-2">
                   <AnimatedCounter to={1000000} />+
                 </p>
-                <p className="text-muted-foreground">Views</p>
+                <p className="text-sm sm:text-base text-muted-foreground">Views</p>
               </div>
               <div>
-                <p className="text-4xl md:text-5xl font-bold text-foreground mb-2">
+                <p className="text-3xl sm:text-4xl md:text-5xl font-bold text-foreground mb-2">
                   <AnimatedCounter to={100} />
                 </p>
-                <p className="text-muted-foreground">Videos</p>
+                <p className="text-sm sm:text-base text-muted-foreground">Videos</p>
               </div>
             </div>
           </div>
